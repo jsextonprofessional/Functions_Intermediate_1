@@ -25,6 +25,7 @@ print(sports_directory)
 # 1.4 Change the value 20 in z to 30
 z[0]['y'] = 30
 print(z)
+print(f"--------------------------------")
 
 
 # 2. Iterate Through a List of Dictionaries
@@ -43,6 +44,7 @@ def iterateDictionary(students2):
         print(output)
 
 iterateDictionary(students2)
+print(f"--------------------------------")
 
 
 # 3. Get Values From a List of Dictionaries
@@ -54,16 +56,19 @@ def iterateDictionary2(key_name, some_list):
 
 iterateDictionary2('first_name', students2)
 iterateDictionary2('last_name', students2)
+print(f"--------------------------------")
 
 
 # 4. Iterate Through a Dictionary with List Values
 # Create a function printInfo(some_dict) that given a dictionary whose values are all lists, prints the name of each key along with the size of its list, and then prints the associated values within each key's list. For example:
 def printInfo(some_dict):
 # print name of each key
-    for k in range(0, len(some_dict)):
-        for key3, val3 in some_dict[k].items():
-            print f""
-
+    print(len(some_dict['locations']), "LOCATIONS")
+    for key3 in some_dict['locations']:
+        print(key3)
+    print(len(some_dict['instructors']), "INSTRUCTORS")
+    for key3 in some_dict['instructors']:
+        print(key3)
 
 
 # print the size of each list
@@ -74,22 +79,3 @@ dojo = {
    'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
 }
 printInfo(dojo)
-# # output:
-# 7 LOCATIONS
-# San Jose
-# Seattle
-# Dallas
-# Chicago
-# Tulsa
-# DC
-# Burbank
-    
-# 8 INSTRUCTORS
-# Michael
-# Amy
-# Eduardo
-# Josh
-# Graham
-# Patrick
-# Minh
-# Devon
